@@ -10,7 +10,7 @@ const Minting = () => {
   const address = useAddress();
   const connectWithMetamask = useMetamask();
   const disconnectWallet = useDisconnect();
-  const editionDrop = useEditionDrop("0xA6235A5A3599e3333CBd173dB3Eb7060c74f3Ced")
+  const editionDrop = useEditionDrop("0x2aDf297aE7B5931aaE1aB03d66095479B49362A0")
 
   const mint = async () => {
     if(editionDrop && address) {
@@ -47,7 +47,7 @@ const Minting = () => {
     <Container>
       <Mint>
         <TitleContainer>
-          <Title>Ikigai Labs<br /> Sending Really<br /> Good Vibes tbh</Title>
+          <Title>Ikigai Labs Inc<br /> Sending Really<br /> Good Vibes tbh</Title>
           <Count>
             {address && totalSupply}
           </Count>

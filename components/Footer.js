@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <Container>
       <FooterContainer>
-        Dimitri Daniloff and LiveTheLifeTV are sending you Good Vibes tbh. Claim your free NFT.
+        Dimitri Daniloff and LiveTheLifeTV are sending you Good Vibes tbh. Claim your free NFT on Mumbai
       </FooterContainer>
     </Container>
   )
