@@ -13,7 +13,7 @@ const Minting = () => {
   const mint = async () => {
     if(contract && address) {
       setInProgress(true);
-      const tx = await contract.claimTo(address, 0, 1);
+      const tx = await contract.erc1155.claim(tokenId, quantity);
       console.log(tx);
       setInProgress(false);
       setCompleted(true)
@@ -33,13 +33,13 @@ const Minting = () => {
 
   useEffect(() => {
     const getTotal = async () => {
-      if(editionDrop) {
-        const total = await editionDrop.totalSupply(0);
+      if(contract) {
+        const total = await contract.erc1155.totalSupply(tokenId);
         setTotalSupply(total.toNumber());
       }
     }
     getTotal();
-  }, [editionDrop])
+  }, [contract])
 
   return (
     <Container>
