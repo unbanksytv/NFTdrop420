@@ -1,21 +1,19 @@
 import { useEffect, useState } from "react";
 import tw from "tailwind-styled-components";
-import { useAddress, useDisconnect, useMetamask, useEditionDrop } from '@thirdweb-dev/react';
+import { ThirdwebSDK } from "@thirdweb-dev/sdk";
 import ReactLoading from "react-loading";
 
 const Minting = () => {
   const [totalSupply, setTotalSupply] = useState(0);
   const [inProgress, setInProgress] = useState(false);
   const [completed, setCompleted] = useState(false);
-  const address = useAddress();
   const connectWithMetamask = useMetamask();
   const disconnectWallet = useDisconnect();
-  const editionDrop = useEditionDrop("0xfAeB16aDDd8cc685fcc9AD1cA5402b1530Fe2338")
 
   const mint = async () => {
-    if(editionDrop && address) {
+    if(contract && address) {
       setInProgress(true);
-      const tx = await editionDrop.claimTo(address, 0, 1);
+      const tx = await contract.claimTo(address, 0, 1);
       console.log(tx);
       setInProgress(false);
       setCompleted(true)
@@ -23,7 +21,7 @@ const Minting = () => {
   }
 
   const viewOpenSea = () => {
-    const url = "https://opensea.io/collection/lets-gooo"
+    const url = "https://opensea.io/"
     window.open(url, "_blank");
   }
 

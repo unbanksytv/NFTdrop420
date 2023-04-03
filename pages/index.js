@@ -1,5 +1,4 @@
 import Head from "next/head";
-import styles from "../css/Home.module.css";
 import tw from "tailwind-styled-components";
 import Script from "next/script";
 
