@@ -1,7 +1,7 @@
 import "../css/globals.css";
 import { ChainId, ThirdwebProvider } from "@thirdweb-dev/react";
 
-const activeChainId = ChainId.Goerli;
+const activeChainId = ChainId.Mumbai;
 
 function MyApp({ Component, pageProps }) {
   return (
