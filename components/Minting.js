@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import tw from "tailwind-styled-components";
-import { ThirdwebSDK } from "@thirdweb-dev/sdk/evm";
+import { ThirdwebSDK } from "@thirdweb-dev/sdk";
 import ReactLoading from "react-loading";
 
 const Minting = () => {

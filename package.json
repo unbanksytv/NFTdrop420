@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@thirdweb-dev/react": "^2.2.7",
-    "@thirdweb-dev/sdk/evm": "^3.10.7",
+    "@thirdweb-dev/sdk": "^3.10.7",
     "ethers": "^5.7.2",
     "next": "12.1.6",
     "react": "18.1.0",
